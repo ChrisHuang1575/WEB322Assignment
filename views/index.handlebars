@@ -1,0 +1,29 @@
+<div class="jumbotron" >
+  <h1 class="display-4">Worlds 2022</h1>
+  <p class="lead">Learn more about the 2022 League of Legends World Championship in North America.</p>
+  <hr class="my-4">
+  <p>It’s time for the 2022 League of Legends World Championship! The tournament will kick off September 29 in the Arena Esports Stadium at Artz Pedregal in Mexico City.</p><br>
+</div>
+
+<h2>NEWS</h2>
+<div class="card-columns ">
+
+  {{#each posts}}
+  <div class='card text-center mt-4' id="format">
+    <div class="card-body">
+      <h3 class="card-title">{{title}}</h3>
+      <p class="card-text">{{description}}</p>
+      <a href="/post/{{slug}}" class="btn btn-info btn-sm">Read more</a>
+    </div>
+    <div class="card-footer">
+      
+      <small class="text-muted">Publish date: {{#formatDate date}}{{/formatDate}}</small>
+    </div>
+  </div>
+
+  {{else}}
+  <h5> No posts </h5>
+
+  {{/each}}
+</div>
+
